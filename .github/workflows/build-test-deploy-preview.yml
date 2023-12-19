@@ -29,17 +29,7 @@ jobs:
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
       - name: Build Project Artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-
-  Test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 16.x ]
-    steps:
-      - run: npm test
-
-  Deploy_to_Vercel_Preview:
-    runs-on: ubuntu-latest
-    steps:
+      - name: Test
+        run: npm test
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
