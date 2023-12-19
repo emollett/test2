@@ -3,6 +3,7 @@ name: Build Test Deploy Preview
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  REACT_APP_ENVIRONMENT: ${{ vars.REACT_APP_ENVIRONMENT }}
 
 on:
   push:
@@ -12,6 +13,7 @@ on:
 jobs:
   Build:
     runs-on: ubuntu-latest
+    environment: Preview
     strategy:
       matrix:
         node-version: [16.x]
