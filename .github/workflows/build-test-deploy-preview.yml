@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  Build and test:
+  Build_and_test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,7 +26,7 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
 
-  Deploy to Vercel Preview:
+  Deploy_to_Vercel_Preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
