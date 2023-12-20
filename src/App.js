@@ -30,6 +30,7 @@ function App() {
             <h1 className="App-header">
                 Hello {fullName.fName}
             </h1>
+            <p className={`environment-tab-${process.env.REACT_APP_ENVIRONMENT}`}>This environment is {process.env.REACT_APP_ENVIRONMENT}</p>
             <form onSubmit={handleOnSubmit}>
                 Say hello to:
                 <input

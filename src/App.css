@@ -12,3 +12,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.environment-tab-development {
+  background-color: red
+}
+
+.environment-tab-preview {
+  background-color: blue;
+}
+
+.environment-tab-production {
+  background-color: green;
+}
